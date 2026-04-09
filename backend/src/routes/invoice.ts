@@ -14,7 +14,7 @@ const invoiceRouter = Router();
 invoiceRouter.get(
   "/my-active-invoice",
   requireAuth,
-  checkRole(["patient"]),
+ checkRole(["admin","patient","doctor","nurse"]),
   getMyActiveInvoice,
 );
 invoiceRouter.get("/", requireAuth, checkRole(["admin"]), allBilling);

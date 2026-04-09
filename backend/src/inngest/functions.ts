@@ -24,12 +24,8 @@ export const admitPatient = inngest.createFunction(
       const patient = await collection.findOne({
         _id: new mongoose.Types.ObjectId(patientId),
       });
-      const doctors = await collection
-        .find({ role: "doctor", status: "active" })
-        .toArray();
-      const nurses = await collection
-        .find({ role: "nurse", status: "active" })
-        .toArray();
+     const doctors = await collection.find({ role: "doctor" }).toArray();
+      const nurses = await collection.find({ role: "nurse" }).toArray();
       return { patient, doctors, nurses };
     });
 
