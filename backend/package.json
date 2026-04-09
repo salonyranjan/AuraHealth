@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "watch": "bun --watch index.ts",
+    "start:server": "nodemon --exec bun run src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.10",
+    "@types/socket.io": "^3.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@better-auth/mongo-adapter": "^1.6.1",
+    "@google/generative-ai": "^0.24.1",
+    "@polar-sh/better-auth": "^1.8.3",
+    "@types/express": "^5.0.6",
+    "better-auth": "^1.6.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "inngest": "^4.2.0",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.4.1",
+    "morgan": "^1.10.1",
+    "socket.io": "^4.8.3",
+    "uploadthing": "^7.7.4"
+  }
+}
